@@ -299,11 +299,9 @@ ol {
 .content__video-card-thumbnail {
 	box-sizing: content-box;
 	width: 194px;
-
 	/* border-top: 2px;
 	border-right: 2px;
 	border-bottom: 2px; */
-
 	object-fit: cover;
 	object-position: center;
 }
