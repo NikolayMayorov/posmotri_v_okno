@@ -199,9 +199,8 @@ ol {
 .search-form__checkbox[type='checkbox']:checked
 	+ .search-form__pseudo-checkbox::before {
 	content: '';
-	position: absolute;
-	top: 10%;
-	left: 10%;
+	display: block;
+	margin: 2px;
 	width: 14px;
 	height: 14px;
 	background-color: #fff;
@@ -209,9 +208,8 @@ ol {
 
 .search-form__pseudo-checkbox:active::before {
 	content: '';
-	position: absolute;
-	top: 10%;
-	left: 10%;
+	display: block;
+	margin: 2px;
 	width: 14px;
 	height: 14px;
 	background-color: #fff;
