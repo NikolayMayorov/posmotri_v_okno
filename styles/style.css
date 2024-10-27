@@ -10,7 +10,8 @@ html {
 }
 
 .page {
-	height: 100%;
+	/* height: 100%; */
+	height: 800px;
 	margin: auto;
 	color: #fff;
 	color: #fff;
