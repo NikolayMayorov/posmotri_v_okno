@@ -2,32 +2,28 @@
 *::before,
 *::after {
 	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
 }
 
 html {
-	/* height: 100%; */
-	/* block-size: 100%; */
-
 	height: 100vh;
 }
 
 .page {
-	/* height: 100%;  */
-	/* height: 800px; */
+	display: grid;
+	justify-items: center;
+	align-items: center;
+	min-height: 100%;
 	margin: auto;
 	color: #fff;
 	font-family: 'Fira Sans Condensed', sans-serif;
 	font-weight: 400;
 	font-size: 18px;
 	font-style: normal;
-	line-height: normal;
 	background-color: #1b1919;
 	inline-size: 1200px;
 	block-size: 100%;
-	min-height: 100%;
-	display: grid;
-	justify-items: center;
-	align-items: center;
 }
 
 h1,
@@ -63,21 +59,10 @@ ol {
 	display: flex;
 	align-items: flex-end;
 	gap: 30px;
-
-	/* inline-size: 1140px; */
-	width: 1140px;
-	/* margin-inline: auto;
-	margin-block-start: 50vh;
-	transform: translateY(-50%); */
-
-	/* border: 1px solid red; */
+	max-width: 1140px;
 }
 
 .result {
-	/* width: 711px; */
-	/* height: 456px; */
-	/* margin-right: 30px; */
-	/* border: 1px solid green; */
 }
 
 .result__video-container {
@@ -85,7 +70,6 @@ ol {
 	width: 711px;
 	height: 386px;
 	margin-bottom: 16px;
-	/* border: 1px solid #6a5acd; */
 }
 
 .result__video {
@@ -99,7 +83,6 @@ ol {
 	display: flex;
 	justify-content: space-between;
 	align-items: flex-start;
-	/* border: 1px solid #cd853f; */
 }
 
 .search-form fieldset {
@@ -118,7 +101,6 @@ ol {
 	font-weight: 400;
 	font-size: 18px;
 	font-style: normal;
-	line-height: normal;
 	background-color: transparent;
 	cursor: pointer;
 }
@@ -131,13 +113,6 @@ ol {
 .more-button:hover {
 	text-decoration: underline;
 }
-/* 
-.search-form__submit-button:focus,
-.more-button:focus {
-	outline: none;
-	text-decoration: none;
-	border: none;
-} */
 
 .search-form__submit-button:focus-visible,
 .more-button:focus-visible {
@@ -147,8 +122,8 @@ ol {
 
 .search-form__submit-button:active,
 .more-button:active {
-	background: #545050;
 	text-decoration: none;
+	background: #545050;
 }
 
 .search-form__label {
@@ -191,7 +166,6 @@ ol {
 	font-weight: 400;
 	font-size: 18px;
 	font-style: normal;
-	line-height: normal;
 	background-color: transparent;
 	appearance: none;
 }
@@ -206,7 +180,6 @@ ol {
 	font-weight: 400;
 	font-size: 18px;
 	font-style: normal;
-	line-height: normal;
 }
 
 .search-form__checkbox-list {
@@ -223,20 +196,40 @@ ol {
 	border: 1px solid #fff;
 }
 
+.search-form__checkbox[type='checkbox']:checked
+	+ .search-form__pseudo-checkbox::before {
+	content: '';
+	position: absolute;
+	top: 10%;
+	left: 10%;
+	width: 14px;
+	height: 14px;
+	background-color: #fff;
+}
+
+.search-form__pseudo-checkbox:active::before {
+	content: '';
+	position: absolute;
+	top: 10%;
+	left: 10%;
+	width: 14px;
+	height: 14px;
+	background-color: #fff;
+}
+
 .content__details {
 	display: flex;
 	flex-direction: column;
 	gap: 26px;
 	width: 100%;
 	height: 100%;
-	/* border: 1px solid #ff00ff; */
 }
 
 .content__card-link {
 	display: block;
+	margin: 2px 2px;
 	color: #fff;
 	text-decoration: none;
-	margin: 2px 2px;
 }
 
 .title {
@@ -245,7 +238,6 @@ ol {
 	font-size: 75px;
 	line-height: 94%;
 	text-transform: uppercase;
-	/* border: 1px solid #ffff00;  */
 }
 
 .title .content__accent {
@@ -256,7 +248,6 @@ ol {
 	position: relative;
 	width: 100%;
 	height: 298px;
-	/* border: 1px solid #ffff00;  */
 	overflow-y: scroll;
 }
 
@@ -267,31 +258,30 @@ ol {
 
 .content__list-item {
 	height: fit-content;
-	/* border: 1px solid red; */
 }
 
 .content__list-item:focus {
-	background-color: inherit;
-	text-decoration: none;
 	border: none;
+	text-decoration: none;
+	background-color: inherit;
 }
 
 .content__list-item:focus-visible {
-	background-color: inherit;
-	text-decoration: none;
 	border: 1px solid #fff;
+	text-decoration: none;
+	background-color: inherit;
 }
 
 .content__list-item:hover {
-	background-color: inherit;
-	text-decoration: underline;
 	border: none;
+	text-decoration: underline;
+	background-color: inherit;
 }
 
 .content__list-item:active {
-	background-color: #545050;
-	text-decoration: none;
 	border: none;
+	text-decoration: none;
+	background-color: #545050;
 }
 
 .content__list .content__list-item:not(:last-child) {
@@ -343,6 +333,6 @@ ol {
 .error__title {
 	font-weight: 400;
 	font-style: normal;
-	line-height: 110%; /* 33px */
+	line-height: 110%;
 	text-transform: uppercase;
 }
