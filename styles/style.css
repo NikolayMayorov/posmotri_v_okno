@@ -16,7 +16,6 @@ html {
 	/* height: 800px; */
 	margin: auto;
 	color: #fff;
-	color: #fff;
 	font-family: 'Fira Sans Condensed', sans-serif;
 	font-weight: 400;
 	font-size: 18px;
@@ -217,7 +216,7 @@ ol {
 }
 
 .search-form__pseudo-checkbox {
-	position: absolute;
+	position: fixed;
 	display: block;
 	width: 19px;
 	height: 19px;
@@ -338,7 +337,7 @@ ol {
 }
 
 .preloader {
-	position: absolute;
+	position: fixed;
 }
 
 .error__title {
