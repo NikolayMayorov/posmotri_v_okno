@@ -60,7 +60,7 @@ ol {
 	align-items: flex-end;
 	gap: 30px;
 	max-width: 1140px;
-	max-height: 534px;
+	min-height: 534px;
 }
 
 .result {
@@ -90,8 +90,7 @@ ol {
 	border: 0;
 }
 
-.search-form__submit-button,
-.more-button {
+button {
 	align-self: flex-end;
 	box-sizing: border-box;
 	width: 194px;
@@ -110,24 +109,23 @@ ol {
 	width: 100%;
 }
 
-.search-form__submit-button:hover,
-.more-button:hover {
+button:hover {
 	text-decoration: underline;
 }
 
-.search-form__submit-button:focus-visible,
-.more-button:focus-visible {
+button:focus-visible {
 	outline: 1px solid #fff;
 	text-decoration: none;
 }
 
-.search-form__submit-button:active,
-.more-button:active {
+button:active {
 	text-decoration: none;
 	background: #545050;
 }
 
 .search-form__label {
+	display: flex;
+	align-items: center;
 	width: fit-content;
 	cursor: pointer;
 }
@@ -162,7 +160,7 @@ ol {
 	border: none;
 	border-top: 1px solid #fff;
 	border-bottom: 1px solid #fff;
-	color: rgba(255, 255, 255, 0.7);
+	color: #fff;
 	font-family: 'Fira Sans Condensed', sans-serif;
 	font-weight: 400;
 	font-size: 18px;
@@ -252,12 +250,7 @@ ol {
 	position: relative;
 	width: 100%;
 	height: 298px;
-	overflow-y: scroll;
-}
-
-/*Убрать полосу прокрутки у элемента*/
-.content__list::-webkit-scrollbar {
-	width: 0;
+	overflow-y: auto;
 }
 
 .content__list-item {
@@ -284,7 +277,6 @@ ol {
 }
 
 .content__list-item:active {
-	outline: 1px solid transparent;
 	text-decoration: none;
 	background-color: #545050;
 }
@@ -316,11 +308,15 @@ ol {
 }
 
 .content__video-card-title {
+	max-width: 200px;
+	overflow: hidden;
 	font-family: Oswald, sans-serif;
 	font-weight: 700;
 	font-size: 30px;
 	line-height: 100%;
 	text-transform: uppercase;
+	text-overflow: ellipsis;
+	white-space: nowrap;
 }
 
 .preloader {
