@@ -60,6 +60,7 @@ ol {
 	align-items: flex-end;
 	gap: 30px;
 	max-width: 1140px;
+	max-height: 534px;
 }
 
 .result {
@@ -116,7 +117,7 @@ ol {
 
 .search-form__submit-button:focus-visible,
 .more-button:focus-visible {
-	border: 1px double #fff;
+	outline: 1px solid #fff;
 	text-decoration: none;
 }
 
@@ -132,17 +133,17 @@ ol {
 }
 
 .search-form__label:has(:focus-visible) {
-	border: 1px solid #fff;
+	outline: 1px solid #fff;
 	text-decoration: none;
 }
 
 .search-form__label:has(:hover) {
-	border: none;
+	outline: 1px solid transparent;
 	text-decoration: underline;
 }
 
 .search-form__label:has(:active) {
-	border: none;
+	outline: 1px solid transparent;
 	text-decoration: none;
 }
 
@@ -190,7 +191,9 @@ ol {
 
 .search-form__pseudo-checkbox {
 	position: fixed;
-	display: block;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 	width: 19px;
 	height: 19px;
 	border: 1px solid #fff;
@@ -200,7 +203,6 @@ ol {
 	+ .search-form__pseudo-checkbox::before {
 	content: '';
 	display: block;
-	margin: 2px;
 	width: 14px;
 	height: 14px;
 	background-color: #fff;
@@ -209,9 +211,9 @@ ol {
 .search-form__pseudo-checkbox:active::before {
 	content: '';
 	display: block;
-	margin: 2px;
 	width: 14px;
 	height: 14px;
+	margin: 2px;
 	background-color: #fff;
 }
 
@@ -228,6 +230,10 @@ ol {
 	margin: 2px 2px;
 	color: #fff;
 	text-decoration: none;
+}
+
+.content__card-link_current {
+	background-color: #545050;
 }
 
 .title {
@@ -256,34 +262,31 @@ ol {
 
 .content__list-item {
 	height: fit-content;
+	/* margin: 1px; */
 }
 
-.content__list-item:focus {
-	border: none;
-	text-decoration: none;
-	background-color: inherit;
+.content__list .content__list-item:not(:last-child) {
+	margin-bottom: 30px;
+}
+
+.content__card-link:focus {
+	outline: 1px solid #fff;
 }
 
 .content__list-item:focus-visible {
-	border: 1px solid #fff;
-	text-decoration: none;
-	background-color: inherit;
+	outline: 1px solid #fff;
 }
 
 .content__list-item:hover {
-	border: none;
+	outline: 1px solid transparent;
 	text-decoration: underline;
 	background-color: inherit;
 }
 
 .content__list-item:active {
-	border: none;
+	outline: 1px solid transparent;
 	text-decoration: none;
 	background-color: #545050;
-}
-
-.content__list .content__list-item:not(:last-child) {
-	margin-bottom: 30px;
 }
 
 .content__video-card {
@@ -302,13 +305,9 @@ ol {
 }
 
 .content__video-card-description-container {
-	/* flex-grow: 1;
-	flex-basis: auto; */
-
+	flex-grow: 1;
+	flex-basis: auto;
 	inline-size: 100%;
-	/* margin-top: 2px;
-	margin-right: 2px;
-	margin-bottom: 4px; */
 }
 
 .content__video-card-description {
